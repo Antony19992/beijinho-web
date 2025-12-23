@@ -1,0 +1,15 @@
+<!-- Botão flutuante -->
+<div class="whatsapp-fab" (click)="toggleChat()" aria-label="Abrir chat">
+</div>
+
+<!-- Balão de conversa -->
+<div class="chat-balloon" *ngIf="chatOpen">
+  <div class="chat-header">
+    <span>Beijo Rosado 💬</span>
+    <button (click)="toggleChat()">✕</button>
+  </div>
+  <div class="chat-body">
+    <p>Oiiee! Seja super bem-vindo(a) à Beijo Rosado! 💗</p>
+    <p>Como posso te ajudar hoje?</p>
+  </div>
+</div>

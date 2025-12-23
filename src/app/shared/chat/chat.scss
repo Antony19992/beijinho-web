@@ -1,0 +1,50 @@
+.whatsapp-fab {
+  position: fixed;
+  bottom: 69px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background-image: url("/assets/images/chat.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.chat-balloon {
+  position: fixed;
+  bottom: 140px;
+  right: 24px;
+  width: 260px;
+  background: #fff;
+  border-radius: 12px;
+  z-index: 9998;
+  font-family: sans-serif;
+}
+
+.chat-header {
+  background: #e44192;
+  color: #fff;
+  padding: 10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chat-body {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+}

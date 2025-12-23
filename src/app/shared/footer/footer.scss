@@ -1,0 +1,22 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  gap: 32px;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+button mat-icon {
+  margin-right: 4px;
+}
