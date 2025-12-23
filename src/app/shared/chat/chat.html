@@ -3,14 +3,16 @@
 
 <!-- Balão de conversa -->
 <div class="chat-balloon" *ngIf="chatOpen">
-  <div class="chat-header">
-    <span>Beijo Rosado 💬</span>
-    <button (click)="toggleChat()">✕</button>
-  </div>
+<div class="chat-header">
+  <img src="../../../assets/beijinho.png" alt="beijinho" width="24" height="24">
+  <span>Beijinho</span>
+  <button (click)="toggleChat()">✕</button>
+</div>
 
-  <div class="chat-body">
-    <div *ngFor="let msg of messages" class="chat-message">
-      <p>{{ msg }}</p>
+
+  <div class="chat-body" #chatBody>
+    <div *ngFor="let msg of messages" class="chat-message" [ngClass]="msg.sender">
+      <p>{{ msg.text }}</p>
     </div>
   </div>
 
