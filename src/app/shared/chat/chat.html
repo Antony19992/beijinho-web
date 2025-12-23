@@ -1,6 +1,5 @@
 <!-- Botão flutuante -->
-<div class="whatsapp-fab" (click)="toggleChat()" aria-label="Abrir chat">
-</div>
+<div class="whatsapp-fab" (click)="toggleChat()" aria-label="Abrir chat"></div>
 
 <!-- Balão de conversa -->
 <div class="chat-balloon" *ngIf="chatOpen">
@@ -8,8 +7,15 @@
     <span>Beijo Rosado 💬</span>
     <button (click)="toggleChat()">✕</button>
   </div>
+
   <div class="chat-body">
-    <p>Oiiee! Seja super bem-vindo(a) à Beijo Rosado! 💗</p>
-    <p>Como posso te ajudar hoje?</p>
+    <div *ngFor="let msg of messages" class="chat-message">
+      <p>{{ msg }}</p>
+    </div>
+  </div>
+
+  <div class="chat-footer">
+    <input [(ngModel)]="userMessage" placeholder="Digite sua mensagem..." />
+    <button (click)="sendMessage()">Enviar</button>
   </div>
 </div>
