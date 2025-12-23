@@ -20,6 +20,9 @@ html {
   ));
 }
 
+.chat-balloon {
+  bottom: calc(140px + env(safe-area-inset-bottom));
+}
 
 
 body {

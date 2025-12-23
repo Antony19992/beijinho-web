@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule, NgIf, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,7 +10,10 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './chat.html',
   styleUrls: ['./chat.scss'],
 })
-export class Chat {
+export class Chat implements OnInit {
+  ngOnInit(): void {
+    window.addEventListener('resize', () => { const vh = window.innerHeight * 0.01; document.documentElement.style.setProperty('--vh', `${vh}px`); });
+  }
   chatOpen = false;
   messages: string[] = [
     'Oiiee! Seja super bem-vindo(a) à Beijo Rosado! 💗',
